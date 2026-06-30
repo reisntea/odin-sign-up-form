@@ -5,58 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-Up</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="card-container">
-        <div class="logo">
-            <img src="./images/odin-lined.png">
-            <h1>ODIN</h1>
+        <div class="logo-container">
+            <div class="logo">
+                <img src="./images/odin-lined.png">
+                <h1>ODIN</h1>
+            </div>
         </div>
         <p>Photo by <a href="https://unsplash.com/@nickkimel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Nick Kimel</a> on <a href="https://unsplash.com/photos/a-large-body-of-water-surrounded-by-mountains--NuLYuc0d3k?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
     </div>
 
     <div class="main-text">
-        <div class="info">
-            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
-            <p>You <em>know</em> you want to.</p>
+        <div class="info-container">
+            <div class="info">
+                <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.</p>
+                <p>Sign up <em>now</em> to get started.</p>
+                <p class="bottom-line">You <em>know</em> you want to.</p>
+            </div>
         </div>
-        <form action="https://httpbin.org/post" method="post">
+        <form id="sign-up" action="https://httpbin.org/post" method="post">
             <h1>Let's Do This!</h1>
-            <section>
-                <p>
-                    <label for="first_name">FIRST NAME</label>
-                    <input type="text" id="first_name" name="first_name">
-                </p>
-                <p>
-                    <label for="last_name">LAST NAME</label>
-                    <input type="text" id="last_name" name="last_name">
-                </p>
-            </section>
-            <section>
-                <p>
-                    <label for="email">EMAIL</label>
-                    <input type="email" id="email" name="email">
-                </p>
-                <p>
-                    <label for="tel_number">PHONE NUMBER</label>
-                    <input type="tel" id="tel_number" name="tel_number">
-                </p>
-            </section>
-            <section>
-                <p>
-                    <label for="password">PASSWORD</label>
-                    <input type="password" id="password" name="password">
-                </p>
-                <p>
-                    <label for="confirm_password">CONFIRM PASSWORD</label>
-                    <input type="password" id="confirm_password" name="confirm_password">
-                </p>
-            </section>
-            <p>
-                <button type="submit">Create Account</button>
-            </p>
+            <div class="form-content">
+                <section>
+                    <p>
+                        <div class="input-group">
+                            <label for="first_name">FIRST NAME</label>
+                            <input type="text" id="first_name" name="first_name">
+                        </div>
+                    </p>
+                    <div class="block"></div>
+                    <p>
+                        <div class="input-group">
+                            <label for="last_name">LAST NAME</label>
+                            <input type="text" id="last_name" name="last_name">
+                        </div>
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        <div class="input-group">
+                            <label for="email">EMAIL</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                    </p>
+                    <div class="block"></div>
+                    <p>
+                        <div class="input-group">
+                            <label for="tel_number">PHONE NUMBER</label>
+                            <input type="tel" id="tel_number" name="tel_number">
+                        </div>
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        <div class="input-group"> 
+                            <label for="password">PASSWORD</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                    </p>
+                    <div class="block"></div>
+                    <p>
+                        <div class="input-group">
+                            <label for="confirm_password">CONFIRM PASSWORD</label>
+                            <input type="password" id="confirm_password" name="confirm_password" required>
+                        </div>
+                    </p>
+                </section>
+            </div>
         </form>
-        <p> Already have an account? <a href="https://i.pinimg.com/736x/b6/83/78/b683788bf174e73ec3281c0f33cfecce.jpg">Log in</a></p>
+        <button type="submit" form="sign-up">Create Account</button>
+        <p id="log-in-text"> Already have an account? <a href="https://i.pinimg.com/736x/b6/83/78/b683788bf174e73ec3281c0f33cfecce.jpg">Log in</a></p>
     </div>
 </body>
 </html>
